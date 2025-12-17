@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Letter</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 손글씨 폰트 -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet"> -->
+</head>
+
+<body>
+
+        <!-- 배경 -->
+    <div class="background">
+        <div class="stars"></div>
+        <div class="snow"></div>
+    </div>
+
+    <div class="moon"></div>
+
+    <div class="deer">
+        <img src="images/deer.png" alt="">
+    </div>
+
+    <div class="light-tree"></div>
+
+
+  <div class="gallery">
+  <!-- 윗줄 -->
+  <div class="row top">
+    <div class="polaroid" onclick="openLetter(0)">
+      <img src="images/photo1.jpg" />
+      <div class="caption">우리의 첫 데이트🧑🏻‍🤝‍👩🏻</div>
+    </div>
+
+    <div class="polaroid" onclick="openLetter(1)">
+      <img src="images/photo2.jpg" />
+      <div class="caption">너랑 꼭 군복 입고<br>사진 찍고 싶었어🪖</div>
+    </div>
+  </div>
+
+  <!-- 아랫줄 -->
+  <div class="row bottom">
+    <div class="polaroid" onclick="openLetter(2)">
+      <img src="images/photo3.jpg" />
+      <div class="caption">아주 알차고 좋았던<br>잠실 데이트🌆</div>
+    </div>
+
+    <div class="polaroid" onclick="openLetter(3)">
+      <img src="images/photo4.jpg" />
+      <div class="caption">만나면 간식 주는<br>예쁜 누나♧</div>
+    </div>
+
+    <div class="polaroid" onclick="openLetter(4)">
+      <img src="images/photo5.jpg" />
+      <div class="caption">유라랑 보는 첫 눈☃️</div>
+    </div>
+  </div>
+</div>
+
+  <!-- 편지 모달 -->
+  <div class="modal" id="modal" onclick="closeLetter()">
+    <div class="letter" onclick="event.stopPropagation()">
+      <h2 id="letterTitle"></h2>
+      <p id="letterContent"></p>
+      <div class="close" onclick="closeLetter()">닫기</div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
